@@ -62,7 +62,7 @@ document.querySelector('.contact-us').addEventListener('click', function() {
     🔡 Comment: ${comment || 'Немає коментаря'}`;
 
     const adminChatId = '1113969494';
-    const clientChatId = 'YOUR_CLIENT_CHAT_ID';
+    const clientChatId = '1746560477';
     const token = '7405695029:AAHS1Kw6ieOvbyVS98ln3OsaN1ds9nfybhc'; 
 
     fetch(`https://api.telegram.org/bot${token}/sendMessage`, {

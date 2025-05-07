@@ -617,8 +617,8 @@ textarea {
 }
 
 .form .request-types input[type="radio"]:checked+label {
-    background-color: #ff7a00;
-    color: white;
+    background: linear-gradient(90deg, rgba(250, 194, 3, 1) 0%, rgba(255, 119, 0, 1) 92%);
+    color: var(--white-color);
     border-color: #ff7a00;
 }
 
