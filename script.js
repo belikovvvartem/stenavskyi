@@ -3,7 +3,7 @@ const swiper = new Swiper(".swiper-container", {
     loop: true,
     autoplay: {
         delay: 5000,
-        disableOnInteraction: true,
+        disableOnInteraction: false, 
         pauseOnMouseEnter: true
     },
     pagination: {
@@ -40,6 +40,11 @@ window.intlTelInput(input, {
     utilsScript: "https://cdn.jsdelivr.net/npm/intl-tel-input@17/build/js/utils.js"
 });
 
+const inputPhone = document.getElementById("phone");
+inputPhone.addEventListener("input", () => {
+    input.value = input.value.replace(/\D/g, "");
+});
+
 document.querySelector('.contact-us').addEventListener('click', function () {
     document.querySelector('#Contact').scrollIntoView({
         behavior: 'smooth',
@@ -54,8 +59,8 @@ document.querySelector('.logo-footer').addEventListener('click', function () {
     });
 });
 
-document.getElementById('contact-form').addEventListener('submit', function(event) {
-    event.preventDefault(); 
+document.getElementById('contact-form').addEventListener('submit', function (event) {
+    event.preventDefault();
 
     const name = document.getElementById('name').value.trim();
     const phone = document.getElementById('phone').value.trim();
@@ -66,8 +71,8 @@ document.getElementById('contact-form').addEventListener('submit', function(even
     const message = `🧑 Нове звернення\n📇 Name: ${name}\n📞 Tel: ${phone}\n📄 Type: ${type}\n💬 Comment: ${comment || 'Немає коментаря'}`;
 
     const adminChatId = '1113969494';
-    const clientChatId = '744263334';7034327346
-    const token = '7405695029:AAHS1Kw6ieOvbyVS98ln3OsaN1ds9nfybhc'; 
+    const clientChatId = '744263334'; 7034327346
+    const token = '7405695029:AAHS1Kw6ieOvbyVS98ln3OsaN1ds9nfybhc';
 
     function sendMessage(chatId, label) {
         fetch(`https://api.telegram.org/bot${token}/sendMessage`, {
@@ -76,15 +81,15 @@ document.getElementById('contact-form').addEventListener('submit', function(even
             body: JSON.stringify({
                 chat_id: chatId,
                 text: message,
-                parse_mode: 'HTML' 
+                parse_mode: 'HTML'
             }),
         })
-        .then(res => res.json())
-        .then(data => {
-            console.log(`${label}:`, data);
-            if (!data.ok) console.error(`${label} error:`, data.description);
-        })
-        .catch(err => console.error(`${label} fetch error:`, err));
+            .then(res => res.json())
+            .then(data => {
+                console.log(`${label}:`, data);
+                if (!data.ok) console.error(`${label} error:`, data.description);
+            })
+            .catch(err => console.error(`${label} fetch error:`, err));
     }
 
     sendMessage(adminChatId, 'Admin');
@@ -92,3 +97,40 @@ document.getElementById('contact-form').addEventListener('submit', function(even
 
     document.getElementById('contact-form').reset();
 });
+
+
+
+const modal = document.getElementById('privacy-modal');
+const openBtn = document.getElementById('open-privacy');
+const closeBtn = document.querySelector('.close-btn');
+
+openBtn.addEventListener('click', function (e) {
+    e.preventDefault();
+    modal.style.display = 'block';
+});
+closeBtn.addEventListener('click', function () {
+    modal.style.display = 'none';
+});
+window.addEventListener('click', function (e) {
+    if (e.target === modal) {
+        modal.style.display = 'none';
+    }
+});
+
+
+
+  function openModal(id) {
+    const modal = document.getElementById(id);
+    modal.classList.add("show");
+  }
+
+  function closeModal(id) {
+    const modal = document.getElementById(id);
+    modal.classList.remove("show");
+  }
+
+  window.onclick = function (event) {
+    if (event.target.classList.contains('modal')) {
+      event.target.classList.remove("show");
+    }
+  }

@@ -1,0 +1,153 @@
+/* Планшети (ширина 768px до 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    /* Контейнер */
+    .container {
+      width: 100%;
+      padding: 0 20px;
+    }
+    /* Навігація */
+    nav .menu {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    nav .menu li a {
+      font-size: 1.1rem;
+      padding: 10px 15px;
+    }
+    /* Hero-секція */
+    .hero {
+      padding: 80px 0;
+      text-align: center;
+    }
+    .hero h1 {
+      font-size: 2.2rem;
+    }
+    .hero p {
+      font-size: 1.1rem;
+    }
+    /* Форми */
+    form input, form textarea {
+      width: 100%;
+    }
+    form .form-group {
+      width: 100%;
+      max-width: 500px;
+      margin: 0 auto 20px;
+    }
+    /* Swiper-слайдери */
+    .swiper-slide {
+      width: 80%;
+      margin: 0 auto;
+    }
+    /* Footer */
+    footer .footer-links {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+    footer .footer-links li a {
+      font-size: 1rem;
+    }
+    /* Блоки about/services/case/portfolio */
+    .services, .case, .portfolio {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+    .services .service-item,
+    .case .case-item,
+    .portfolio .portfolio-item {
+      width: 48%;
+      margin-bottom: 20px;
+    }
+  }
+
+/* Телефони (максимальна ширина 768px) */
+@media (max-width: 768px) {
+    /* Контейнер */
+    .container {
+      width: 100%;
+      padding: 0 15px;
+    }
+    /* Навігація */
+    nav .menu {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    nav .menu li {
+      margin: 10px 0;
+    }
+    nav .menu li a {
+      font-size: 1rem;
+      padding: 8px 0;
+    }
+    /* Hero-секція */
+    .hero {
+      padding: 60px 0;
+      text-align: center;
+    }
+    .hero h1 {
+      font-size: 1.8rem;
+      line-height: 1.2;
+    }
+    .hero p {
+      font-size: 1rem;
+      line-height: 1.4;
+    }
+    /* Форми */
+    form input, form textarea, form select, form button {
+      width: 100%;
+      margin-bottom: 15px;
+    }
+    /* Swiper-слайдери */
+    .swiper-container {
+      width: 100%;
+    }
+    .swiper-slide {
+      width: 100%;
+      margin: 0 auto;
+    }
+    /* Footer */
+    footer .footer-links {
+      flex-direction: column;
+      align-items: center;
+    }
+    footer .footer-links li {
+      margin: 5px 0;
+    }
+    footer .footer-links li a {
+      font-size: 0.9rem;
+    }
+    /* Блоки about/services/case/portfolio */
+    .about, .services, .case, .portfolio {
+      flex-direction: column;
+      align-items: center;
+    }
+    .services .service-item,
+    .case .case-item,
+    .portfolio .portfolio-item {
+      width: 100%;
+      margin: 10px 0;
+    }
+    /* Вимикання декоративних ефектів */
+    .glow, .shadow, .decorative {
+      box-shadow: none !important;
+      text-shadow: none !important;
+    }
+  }
+  @media (max-width: 480px) {
+    /* Додаткові налаштування для маленьких екранів */
+    .hero h1 {
+      font-size: 1.5rem;
+    }
+    .hero p {
+      font-size: 0.9rem;
+    }
+    nav .menu li a {
+      font-size: 0.9rem;
+    }
+    footer {
+      font-size: 0.85rem;
+    }
+  }
+
