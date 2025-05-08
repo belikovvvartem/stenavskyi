@@ -134,3 +134,33 @@ window.addEventListener('click', function (e) {
       event.target.classList.remove("show");
     }
   }
+
+
+  document.addEventListener('keydown', function (e) {
+    if (
+      e.key === 'F12' ||
+      (e.ctrlKey && e.shiftKey && ['I', 'C', 'J'].includes(e.key)) ||
+      (e.ctrlKey && ['U', 'S'].includes(e.key))
+    ) {
+      e.preventDefault();
+      alert('Access denied');
+      return false;
+    }
+  });
+
+  // Спроба заборонити відкриття правою кнопкою миші
+  document.addEventListener('contextmenu', function (e) {
+    e.preventDefault();
+    alert('Right click disabled');
+  });
+
+  // Спроба виявлення DevTools (ненадійно)
+  setInterval(() => {
+    const before = performance.now();
+    debugger;
+    const after = performance.now();
+    if (after - before > 100) {
+      alert('DevTools detected');
+      window.close(); // або location.href = 'about:blank'
+    }
+  }, 1000);
