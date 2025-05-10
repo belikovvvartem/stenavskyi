@@ -476,6 +476,7 @@ ul li a:hover {
 .faq {
     margin-top: 150px;
     overflow: hidden;
+    margin-bottom: 150px;
 }
 
 .faq-item {
@@ -988,4 +989,32 @@ p a {
         padding-left: 0;
         margin-top: 20px;
     }
+}
+
+
+#notification {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw; height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+}
+#notification-content {
+    background: white;
+    padding: 20px 30px;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    text-align: center;
+    
+}
+
+#notification-content p {
+    color: #000;
+}
+
+#notification button {
+    margin-top: 10px;
 }

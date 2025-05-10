@@ -28,18 +28,6 @@ function toggleAnswer(element) {
     }
 }
 
-const input = document.querySelector("#phone");
-window.intlTelInput(input, {
-    initialCountry: "auto",
-    geoIpLookup: callback => {
-        fetch("https://ipapi.co/json")
-            .then(res => res.json())
-            .then(data => callback(data.country_code))
-            .catch(() => callback("UA"));
-    },
-    utilsScript: "https://cdn.jsdelivr.net/npm/intl-tel-input@17/build/js/utils.js"
-});
-
 const inputPhone = document.getElementById("phone");
 inputPhone.addEventListener("input", () => {
     input.value = input.value.replace(/\D/g, "");
@@ -59,44 +47,94 @@ document.querySelector('.logo-footer').addEventListener('click', function () {
     });
 });
 
-document.getElementById('contact-form').addEventListener('submit', function (event) {
-    event.preventDefault();
 
-    const name = document.getElementById('name').value.trim();
-    const phone = document.getElementById('phone').value.trim();
-    const comment = document.getElementById('comment').value.trim();
-    const typeInput = document.querySelector('input[name="type"]:checked');
-    const type = typeInput ? typeInput.value : 'Не вказано';
 
-    const message = `🧑 Нове звернення\n📇 Name: ${name}\n📞 Tel: ${phone}\n📄 Type: ${type}\n💬 Comment: ${comment || 'Немає коментаря'}`;
 
-    const adminChatId = '1113969494';
-    const clientChatId = '744263334'; 7034327346
-    const token = '7405695029:AAHS1Kw6ieOvbyVS98ln3OsaN1ds9nfybhc';
 
-    function sendMessage(chatId, label) {
-        fetch(`https://api.telegram.org/bot${token}/sendMessage`, {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({
-                chat_id: chatId,
-                text: message,
-                parse_mode: 'HTML'
-            }),
-        })
-            .then(res => res.json())
-            .then(data => {
-                console.log(`${label}:`, data);
-                if (!data.ok) console.error(`${label} error:`, data.description);
-            })
-            .catch(err => console.error(`${label} fetch error:`, err));
+document.addEventListener('DOMContentLoaded', function () {
+    const form = document.getElementById('contact-form');
+    const phoneInput = document.getElementById('phone');
+    const notification = document.getElementById('notification');
+    const notificationText = document.getElementById('notification-text');
+    const closeBtn = document.getElementById('close-notification');
+
+    // Авто-плюс
+    phoneInput.addEventListener('focus', () => {
+        if (!phoneInput.value.startsWith('+')) {
+            phoneInput.value = '+' + phoneInput.value.replace(/\D/g, '');
+        }
+    });
+
+    function showNotification(text) {
+        notificationText.textContent = text;
+        notification.style.display = 'flex';
     }
 
-    sendMessage(adminChatId, 'Admin');
-    sendMessage(clientChatId, 'Client');
+    closeBtn.addEventListener('click', () => {
+        notification.style.display = 'none';
+    });
 
-    document.getElementById('contact-form').reset();
+    form.addEventListener('submit', function (event) {
+        event.preventDefault();
+
+        const name = document.getElementById('name').value.trim();
+        const comment = document.getElementById('comment').value.trim();
+        const typeInput = document.querySelector('input[name="type"]:checked');
+        const type = typeInput ? typeInput.value : 'Не вказано';
+
+        const rawPhone = phoneInput.value.trim().replace(/\D/g, '');
+        const phone = '+' + rawPhone;
+
+        const validOperatorsUA = ["39","50","63","66","67","68","73","91","92","93","94","95","96","97","98","99"];
+        let isValid = false;
+
+        if (phone.startsWith("+380") && phone.length === 13) {
+            const operator = phone.slice(4, 6);
+            isValid = validOperatorsUA.includes(operator);
+        } else if (phone.startsWith("+420") && phone.length === 13) {
+            isValid = true;
+        } else if (phone.startsWith("+1") && phone.length === 12) {
+            isValid = true;
+        } else if (phone.startsWith("+44") && phone.length === 13 && phone[3] === '7') {
+            isValid = true;
+        }
+
+        if (!isValid) {
+            showNotification("Введіть правильний номер телефону.");
+            return;
+        }
+
+        const message = `🧑 Нове звернення\n📇 Ім’я: ${name}\n📞 Телефон: ${phone}\n📄 Тип: ${type}\n💬 Коментар: ${comment || 'Немає'}`;
+        const token = '7405695029:AAHS1Kw6ieOvbyVS98ln3OsaN1ds9nfybhc';
+        const adminChatIds = ['1113969494', '1113969494'];
+
+        Promise.all(adminChatIds.map(chatId =>
+            fetch(`https://api.telegram.org/bot${token}/sendMessage`, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    chat_id: chatId,
+                    text: message,
+                    parse_mode: 'HTML'
+                })
+            }).then(res => res.json())
+        )).then(responses => {
+            const hasError = responses.some(r => !r.ok);
+            if (hasError) {
+                showNotification("Помилка надсилання. Спробуйте ще раз.");
+            } else {
+                showNotification("Звернення успішно надіслано!");
+                form.reset();
+            }
+        }).catch(() => {
+            showNotification("Помилка з'єднання з Telegram.");
+        });
+    });
 });
+
+
+
+
 
 
 
@@ -134,33 +172,3 @@ window.addEventListener('click', function (e) {
       event.target.classList.remove("show");
     }
   }
-
-
-  document.addEventListener('keydown', function (e) {
-    if (
-      e.key === 'F12' ||
-      (e.ctrlKey && e.shiftKey && ['I', 'C', 'J'].includes(e.key)) ||
-      (e.ctrlKey && ['U', 'S'].includes(e.key))
-    ) {
-      e.preventDefault();
-      alert('Access denied');
-      return false;
-    }
-  });
-
-  // Спроба заборонити відкриття правою кнопкою миші
-  document.addEventListener('contextmenu', function (e) {
-    e.preventDefault();
-    alert('Right click disabled');
-  });
-
-  // Спроба виявлення DevTools (ненадійно)
-  setInterval(() => {
-    const before = performance.now();
-    debugger;
-    const after = performance.now();
-    if (after - before > 100) {
-      alert('DevTools detected');
-      window.close(); // або location.href = 'about:blank'
-    }
-  }, 1000);
