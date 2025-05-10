@@ -103,102 +103,170 @@
         </section>
         <section class="services" id="Services">
             <h1 class="services-title title">Послуги</h1>
-            <div class="swiper-container">
-                <div class="swiper-wrapper">
-                    <!-- Slides -->
-                    <div class="swiper-slide">
-                        <div class="service">
-                            <div class="service-top">
-                                <div class="service-name">
-                                    <div class="service-number">01</div>
-                                    <div class="service-text">таргет</div>
-                                </div>
-                                <div class="service-mini-description">Який приводить клієнтів через рекламу</div>
+            <div id="tabs">
+                <div id="tab-buttons">
+                    <button data-tab="target">Таргет</button>
+                    <button data-tab="smm">SMM</button>
+                    <button data-tab="automatic">Автоматика</button>
+                    <button data-tab="landing">Лендінги</button>
+                    <button data-tab="tiktok">TikTok Ads</button>
+                </div>
+
+                <div id="tab-content">
+                    <div class="tab active" id="target">
+                        <div class="tab-text">
+                            <h2 class="tab-title">Таргетована реклама (FB, Inst)</h2>
+                            <h3 class="tab-description">Отримуй клієнтів з перших днів запуску</h3>
+                            <h4 class="what-is">Що це таке?</h4>
+                            <h3 class="tab-full-description">Це реклама в соцмережах, яка показується точно твоїй
+                                цільовій аудиторії. Вона з’являється в Instagram, Facebook, TikTok або інших платформах
+                                тим, хто зацікавлений у твоїх послугах чи товарах.</h3>
+                        </div>
+                        <div class="tab-blocks">
+                            <div class="tab-block">
+                                <h4 class="block-title">Переваги:</h4>
+                                <ul>
+                                    <li>Пряме попадання в ціль</li>
+                                    <li>Швидкий результат</li>
+                                    <li>Гнучкий бюджет</li>
+                                    <li>Зрозуміла аналітика</li>
+                                </ul>
                             </div>
-                            <div class="service-bottom">
-                                <div class="service-bottom-description">Налаштуємо таргетовану рекламу в Facebook та
-                                    Instagram, яка точно потрапить до вашої аудиторії. <br>
-                                    Ми знаємо, як зробити так, щоб ваші оголошення працювали на результат - більше
-                                    заявок, більше продажів!</div>
+                            <div class="tab-block">
+                                <h4 class="block-title">Кому підходить:</h4>
+                                <ul>
+                                    <li>Малому бізнесу</li>
+                                    <li>Локальним послугам</li>
+                                    <li>Інфопродуктам</li>
+                                    <li>Онлайн-магазинам</li>
+                                </ul>
                             </div>
+                            <button>Хочу Таргет</button>
                         </div>
                     </div>
-                    <div class="swiper-slide">
-                        <div class="service">
-                            <div class="service-top">
-                                <div class="service-name">
-                                    <div class="service-number">02</div>
-                                    <div class="service-text">смм</div>
-                                </div>
-                                <div class="service-mini-description">Який залучає аудиторію в соцмережах</div>
+                    <div class="tab" id="smm">
+                        <div class="tab-text">
+                            <h2 class="tab-title">SMM-просування</h2>
+                            <h3 class="tab-description">Будуй активну спільноту навколо бренду</h3>
+                            <h4 class="what-is">Що це таке?</h4>
+                            <h3 class="tab-full-description">Це стратегічне ведення сторінок у соцмережах — пости,
+                                сторіс, комунікація з аудиторією, брендинг. Все, щоб створити довіру й цікавість до
+                                тебе.</h3>
+                        </div>
+                        <div class="tab-blocks">
+                            <div class="tab-block">
+                                <h4 class="block-title">Переваги:</h4>
+                                <ul>
+                                    <li>Завжди онлайн</li>
+                                    <li>Підвищення довіри</li>
+                                    <li>Жива аудиторія</li>
+                                    <li>Ріст підписників</li>
+                                </ul>
                             </div>
-                            <div class="service-bottom">
-                                <div class="service-bottom-description">Ведемо ваші соціальні мережі так, щоб ваш бренд
-                                    любили та впізнавали. Контент, який чіпляє, + стратегія для росту підписників та
-                                    залучення.
-                                    <br> Давайте зробимо ваші соцмережі живими!
-                                </div>
+                            <div class="tab-block">
+                                <h4 class="block-title">Кому підходить:</h4>
+                                <ul>
+                                    <li>Особистим брендам</li>
+                                    <li>Блогерам</li>
+                                    <li>Малому бізнесу</li>
+                                    <li>Онлайн-курсам</li>
+                                </ul>
                             </div>
+                            <button>Хочу SMM</button>
                         </div>
                     </div>
-                    <div class="swiper-slide">
-                        <div class="service">
-                            <div class="service-top">
-                                <div class="service-name">
-                                    <div class="service-number">03</div>
-                                    <div class="service-text">автоматика</div>
-                                </div>
-                                <div class="service-mini-description">Чат-боти для автоматизації продажів</div>
+                    <div class="tab" id="automatic">
+                        <div class="tab-text">
+                            <h2 class="tab-title">Автоматизація</h2>
+                            <h3 class="tab-description">Звільни час і збільшуй продажі без зусиль</h3>
+                            <h4 class="what-is">Що це таке?</h4>
+                            <h3 class="tab-full-description">Це Telegram, Instagram або Facebook боти, які автоматично
+                                відповідають клієнтам, приймають замовлення, консультують і ведуть до покупки 24/7.</h3>
+                        </div>
+                        <div class="tab-blocks">
+                            <div class="tab-block">
+                                <h4 class="block-title">Переваги:</h4>
+                                <ul>
+                                    <li>Швидка відповідь клієнтам</li>
+                                    <li>Менше рутини</li>
+                                    <li>Більше замовлень</li>
+                                    <li>Працює 24/7</li>
+                                </ul>
                             </div>
-                            <div class="service-bottom">
-                                <div class="service-bottom-description">Автоматизуємо ваші продажі за допомогою
-                                    чат-ботів. Відповіді на запитання, обробка заявок, воронки продажів бот зробить усе
-                                    за вас 24/7.
-                                    Економте час і заробляйте більше!</div>
+                            <div class="tab-block">
+                                <h4 class="block-title">Кому підходить:</h4>
+                                <ul>
+                                    <li>Онлайн-магазинам</li>
+                                    <li>Курсам / марафонам</li>
+                                    <li>Бізнесам</li>
+                                    <li>Консультантам</li>
+                                </ul>
                             </div>
+                            <button>Хочу бота</button>
                         </div>
                     </div>
-                    <div class="swiper-slide">
-                        <div class="service">
-                            <div class="service-top">
-                                <div class="service-name">
-                                    <div class="service-number">04</div>
-                                    <div class="service-text">лендінги</div>
-                                </div>
-                                <div class="service-mini-description">Створення односторінкових сайтів</div>
+                    <div class="tab" id="landing">
+                        <div class="tab-text">
+                            <h2 class="tab-title">Сторінки-продажі</h2>
+                            <h3 class="tab-description">Твій продукт — красиво, швидко і з заявками</h3>
+                            <h4 class="what-is">Що це таке?</h4>
+                            <h3 class="tab-full-description">Це односторінковий сайт, який створює довіру, розповідає
+                                про продукт і веде до дії: залишити заявку, купити, зареєструватися.</h3>
+                        </div>
+                        <div class="tab-blocks">
+                            <div class="tab-block">
+                                <h4 class="block-title">Переваги:</h4>
+                                <ul>
+                                    <li>Висока конверсія</li>
+                                    <li>Яскравий дизайн</li>
+                                    <li>Працює 24/7</li>
+                                    <li>Підходить для реклами</li>
+                                </ul>
                             </div>
-                            <div class="service-bottom">
-                                <div class="service-bottom-description">Створюємо лендінги з крутим дизайном і чіткою
-                                    структурою, щоб кожен клік конвертувався. <br> + Налаштуємо таргет (FB, Instagram),
-                                    щоб привести цільову аудиторію на ваш лендінг.</div>
+                            <div class="tab-block">
+                                <h4 class="block-title">Кому підходить:</h4>
+                                <ul>
+                                    <li>Онлайн-продуктам</li>
+                                    <li>Курсам</li>
+                                    <li>Акціям і подіям</li>
+                                    <li>Фізичним товарам</li>
+                                </ul>
                             </div>
+                            <button>Хочу лендінг</button>
+                        </div>
+                    </div>
+                    <div class="tab" id="tiktok">
+                        <div class="tab-text">
+                            <h2 class="tab-title">TikTok ADS</h2>
+                            <h3 class="tab-description">Реклама, яка привертає увагу й продає</h3>
+                            <h4 class="what-is">Що це таке?</h4>
+                            <h3 class="tab-full-description">Це просування твого продукту через TikTok — найпотужнішу платформу для залучення молодої аудиторії. Ми створюємо креативи, запускаємо рекламу й приводимо клієнтів.</h3>
+                        </div>
+                        <div class="tab-blocks">
+                            <div class="tab-block">
+                                <h4 class="block-title">Переваги:</h4>
+                                <ul>
+                                    <li>Швидкий результат</li>
+                                    <li>Вірусне охоплення</li>
+                                    <li>Точна аудиторія</li>
+                                    <li>Максимум ефект</li>
+                                </ul>
+                            </div>
+                            <div class="tab-block">
+                                <h4 class="block-title">Кому підходить:</h4>
+                                <ul>
+                                    <li>Онлайн-магазинам</li>
+                                    <li>Курсам та експертам</li>
+                                    <li>Послугам</li>
+                                    <li>Новим брендам</li>
+                                </ul>
+                            </div>
+                            <button>Хочу TikTok Ads</button>
                         </div>
                     </div>
                 </div>
-                <!-- If we need pagination -->
-                <div class="swiper-pagination"></div>
-
-                <!-- If we need navigation buttons -->
-                <div class="swiper-button-prev" aria-label="previous slide"></div>
-                <div class="swiper-button-next" aria-label="next slide"></div>
             </div>
         </section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         <section class="portfolio" id="Portfolio">
             <h1 class="portfolio-title title">Портфоліо</h1>
 
@@ -244,7 +312,6 @@
                         </div>
                     </div>
 
-                    <!-- інші swiper-slide -->
                     <div class="swiper-slide">
                         <div class="case">
                             <div class="case-left">
@@ -344,21 +411,6 @@
             <span class="close" onclick="closeModal('modal3')">&times;</span>
             <img class="modal-content" src="./src/case/inside/case-inside.png" alt="Інсайд кейсу POP MEBLI">
         </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         <section class="conect-form" id="Contact">
             <h1 class="form-title title">Звʼяжіться зі мною — обговоримо ваш проєкт</h1>
             <div class="form">
@@ -366,12 +418,12 @@
                     <input type="text" id="name" name="name" placeholder="Ім’я*" required maxlength="20"
                         autocomplete="off" />
 
-                    <input type="tel" id="phone" name="phone" required maxlength="16" placeholder="Номер телефону" />
+                    <input type="tel" id="phone" name="phone" required maxlength="16" placeholder="Номер телефону"
+                        autocomplete="off" />
 
 
                     <textarea id="comment" name="comment" placeholder="Коментар (необов’язково)"></textarea>
                     <div class="request-types">
-                        <p>Тип звернення</p>
                         <input type="radio" id="consultation" name="type" value="Консультація" />
                         <label for="consultation">Консультація</label>
 

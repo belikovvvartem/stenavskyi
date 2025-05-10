@@ -173,48 +173,74 @@ window.addEventListener('click', function (e) {
     }
   }
 
+  const buttons = document.querySelectorAll('#tab-buttons button');
+  const tabs = document.querySelectorAll('.tab');
 
-  // Блок правої кнопки
-document.addEventListener('contextmenu', e => e.preventDefault());
+  buttons.forEach(button => {
+    button.addEventListener('click', () => {
+      const targetId = button.dataset.tab;
 
-// Блок клавіш (F12, Ctrl+Shift+I тощо)
-document.addEventListener('keydown', e => {
-  if (
-    e.key === 'F12' ||
-    (e.ctrlKey && e.shiftKey && ['I', 'J', 'C', 'U'].includes(e.key.toUpperCase())) ||
-    (e.ctrlKey && ['S', 'U'].includes(e.key.toUpperCase()))
-  ) {
-    e.preventDefault();
-    e.stopPropagation();
-    window.close();
-  }
-});
+      tabs.forEach(tab => {
+        tab.classList.remove('active');
+      });
 
-// Перевірка DevTools через вимірювання часу
-(function detectDevTools() {
-  const threshold = 160;
-  let devtoolsOpen = false;
+      document.getElementById(targetId).classList.add('active');
+    });
+  });
 
-  setInterval(() => {
-    const start = new Date();
-    debugger; // може викликати затримку
-    const end = new Date();
-    if (end - start > threshold) {
-      devtoolsOpen = true;
-      document.body.innerHTML = '';
-      alert("DevTools виявлено. Сторінку буде закрито.");
-      window.open('', '_self', '');
-      window.close();
-    }
-  }, 1000);
-})();
+  
+  document.querySelectorAll('#tab-content button').forEach(button => {
+    button.addEventListener('click', () => {
+      const contactSection = document.getElementById('Contact');
+      if (contactSection) {
+        contactSection.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
 
-// Перевірка розміру вікна (DevTools зменшує область перегляду)
-setInterval(() => {
-  if (window.outerWidth - window.innerWidth > 100) {
-    document.body.innerHTML = '';
-    alert("DevTools виявлено. Сторінку буде закрито.");
-    window.open('', '_self', '');
-    window.close();
-  }
-}, 1000);
+  
+
+//   // Блок правої кнопки
+// document.addEventListener('contextmenu', e => e.preventDefault());
+
+// // Блок клавіш (F12, Ctrl+Shift+I тощо)
+// document.addEventListener('keydown', e => {
+//   if (
+//     e.key === 'F12' ||
+//     (e.ctrlKey && e.shiftKey && ['I', 'J', 'C', 'U'].includes(e.key.toUpperCase())) ||
+//     (e.ctrlKey && ['S', 'U'].includes(e.key.toUpperCase()))
+//   ) {
+//     e.preventDefault();
+//     e.stopPropagation();
+//     window.close();
+//   }
+// });
+
+// // Перевірка DevTools через вимірювання часу
+// (function detectDevTools() {
+//   const threshold = 160;
+//   let devtoolsOpen = false;
+
+//   setInterval(() => {
+//     const start = new Date();
+//     debugger; // може викликати затримку
+//     const end = new Date();
+//     if (end - start > threshold) {
+//       devtoolsOpen = true;
+//       document.body.innerHTML = '';
+//       alert("DevTools виявлено. Сторінку буде закрито.");
+//       window.open('', '_self', '');
+//       window.close();
+//     }
+//   }, 1000);
+// })();
+
+// // Перевірка розміру вікна (DevTools зменшує область перегляду)
+// setInterval(() => {
+//   if (window.outerWidth - window.innerWidth > 100) {
+//     document.body.innerHTML = '';
+//     alert("DevTools виявлено. Сторінку буде закрито.");
+//     window.open('', '_self', '');
+//     window.close();
+//   }
+// }, 1000);

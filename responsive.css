@@ -1,153 +1,549 @@
-/* Планшети (ширина 768px до 1024px) */
-@media (min-width: 769px) and (max-width: 1024px) {
-    /* Контейнер */
-    .container {
-      width: 100%;
-      padding: 0 20px;
-    }
-    /* Навігація */
-    nav .menu {
-      flex-direction: row;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-    nav .menu li a {
-      font-size: 1.1rem;
-      padding: 10px 15px;
-    }
-    /* Hero-секція */
-    .hero {
-      padding: 80px 0;
-      text-align: center;
-    }
-    .hero h1 {
-      font-size: 2.2rem;
-    }
-    .hero p {
-      font-size: 1.1rem;
-    }
-    /* Форми */
-    form input, form textarea {
-      width: 100%;
-    }
-    form .form-group {
-      width: 100%;
-      max-width: 500px;
-      margin: 0 auto 20px;
-    }
-    /* Swiper-слайдери */
-    .swiper-slide {
-      width: 80%;
-      margin: 0 auto;
-    }
-    /* Footer */
-    footer .footer-links {
-      flex-direction: row;
-      justify-content: space-between;
-    }
-    footer .footer-links li a {
-      font-size: 1rem;
-    }
-    /* Блоки about/services/case/portfolio */
-    .services, .case, .portfolio {
-      flex-direction: row;
-      flex-wrap: wrap;
-      justify-content: space-between;
-    }
-    .services .service-item,
-    .case .case-item,
-    .portfolio .portfolio-item {
-      width: 48%;
-      margin-bottom: 20px;
-    }
+@media (min-width: 769px) and (max-width: 1200px) {
+  .container {
+    width: 768px;
   }
 
-/* Телефони (максимальна ширина 768px) */
+  button {
+    padding: 10px;
+    height: 50px;
+    width: 170px;
+    font-size: 18px;
+  }
+
+  .logo-name {
+    display: none;
+  }
+
+  header button {
+    display: none;
+  }
+
+  .experience:last-child {
+    display: none;
+  }
+
+  .about {
+    font-size: 20px;
+  }
+
+  #tab-buttons button{
+    margin-top: 10px;
+  }
+
+  h2 {
+    font-size: 25px !important;
+  }
+
+  h3 {
+    font-size: 16px !important;
+  }
+
+  h4 {
+    font-size: 15px !important;
+  }
+
+  li {
+    font-size: 15px !important;
+  }
+
+  .tab-blocks  {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .what-is {
+    margin-top: 50px !important;
+  }
+
+  .tab-blocks button {
+    width: 200px;
+  }
+
+  .portfolio {
+    margin-top: 2px;
+  }
+
+  .swiper-slide {
+    margin-top: -80px;
+  }
+
+  .case-right {
+    text-align: center;
+    margin-top: -70px;
+  }
+
+  .swiper-button-next, .swiper-button-prev {
+    margin-top: -100px !important;
+  }
+
+  .result-done {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .case-buttons button {
+    font-size: 15px;
+    height: 40px;
+  }
+
+  .case-buttons {
+    gap: 5px;
+  }
+
+  .conect-form {
+    margin-top: 0px;
+    justify-content: center;
+  }
+
+  .conect-form button {
+    width: 200px;
+  }
+
+  iframe {
+    display: none;
+  }
+
+  .faq {
+    margin-top: 20px;
+  }
+
+  footer .logo {
+    width: 100px;
+  }
+
+  .footer-bottom {
+    text-align: center;
+  }
+  
+}
+
 @media (max-width: 768px) {
-    /* Контейнер */
-    .container {
-      width: 100%;
-      padding: 0 15px;
-    }
-    /* Навігація */
-    nav .menu {
-      flex-direction: column;
-      align-items: flex-start;
-    }
-    nav .menu li {
-      margin: 10px 0;
-    }
-    nav .menu li a {
-      font-size: 1rem;
-      padding: 8px 0;
-    }
-    /* Hero-секція */
-    .hero {
-      padding: 60px 0;
-      text-align: center;
-    }
-    .hero h1 {
-      font-size: 1.8rem;
-      line-height: 1.2;
-    }
-    .hero p {
-      font-size: 1rem;
-      line-height: 1.4;
-    }
-    /* Форми */
-    form input, form textarea, form select, form button {
-      width: 100%;
-      margin-bottom: 15px;
-    }
-    /* Swiper-слайдери */
-    .swiper-container {
-      width: 100%;
-    }
-    .swiper-slide {
-      width: 100%;
-      margin: 0 auto;
-    }
-    /* Footer */
-    footer .footer-links {
-      flex-direction: column;
-      align-items: center;
-    }
-    footer .footer-links li {
-      margin: 5px 0;
-    }
-    footer .footer-links li a {
-      font-size: 0.9rem;
-    }
-    /* Блоки about/services/case/portfolio */
-    .about, .services, .case, .portfolio {
-      flex-direction: column;
-      align-items: center;
-    }
-    .services .service-item,
-    .case .case-item,
-    .portfolio .portfolio-item {
-      width: 100%;
-      margin: 10px 0;
-    }
-    /* Вимикання декоративних ефектів */
-    .glow, .shadow, .decorative {
-      box-shadow: none !important;
-      text-shadow: none !important;
-    }
-  }
-  @media (max-width: 480px) {
-    /* Додаткові налаштування для маленьких екранів */
-    .hero h1 {
-      font-size: 1.5rem;
-    }
-    .hero p {
-      font-size: 0.9rem;
-    }
-    nav .menu li a {
-      font-size: 0.9rem;
-    }
-    footer {
-      font-size: 0.85rem;
-    }
+
+  .container {
+    width: 550px;
+    padding: 0px;
   }
 
+  button {
+    padding: 10px;
+    height: 50px;
+    min-width: 130px;
+    font-size: 18px;
+  }
+
+  .title {
+    font-size: 30px;
+  }
+
+  .logo-name, .experience:last-child, header button, iframe {
+    display: none;
+  }
+
+  ul {
+    width: 390px !important;
+  }
+
+  .hero-container {
+    flex-direction: column;
+  }
+
+  .vasil-foto {
+    order: 1;
+    margin-top: 20px;
+  }
+
+  .vasil-foto img {
+    width: 400px;
+  }
+
+  .container-left {
+    order: 2;
+    margin-top: -300px;
+    margin-right: 180px;
+    gap: 250px;
+  }
+
+  .container-left .experience  {
+    margin-left: 45px !important;
+  }
+
+  .hero-main-text {
+    font-size: 40px;
+  }
+
+  .about {
+    font-size: 20px;
+  }
+
+  #tab-buttons button{
+    margin-top: 10px;
+    min-width: 120px;
+  }
+
+  h2 {
+    font-size: 25px !important;
+  }
+
+  h3 {
+    font-size: 16px !important;
+  }
+
+  h4 {
+    font-size: 15px !important;
+  }
+
+  li {
+    font-size: 15px !important;
+  }
+
+  .tab {
+    padding: 0;
+    flex-direction: column !important;
+  }
+
+  .tab-blocks  {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: -50px !important;
+    margin-left: 15px;
+  }
+
+  .tab-blocks button {
+    display: none;
+  }
+
+  .tab-block {
+    width: 200px;
+  }
+
+  .what-is {
+    margin-top: 20px !important;
+  }
+
+  .tab-blocks button {
+    width: 200px;
+  }
+
+  .portfolio {
+    margin-top: 60px;
+  }
+
+  .swiper-slide {
+    margin-top: -100px !important;
+  }
+
+  .swiper-slide img {
+    display: none;
+  }
+
+  .case-right {
+    text-align: center;
+    margin-top: -70px;
+  }
+
+  .swiper-button-next, .swiper-button-prev {
+    margin-top: -100px !important;
+  }
+
+  .result-done {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .results, .done {
+    width: 300px;
+  }
+
+  .results li {
+    width: 76%;
+  }
+
+  .case-buttons button {
+    font-size: 15px;
+    height: 40px;
+  }
+
+  .case-buttons {
+    gap: 5px;
+  }
+
+  .conect-form {
+    margin-top: 0px;
+    justify-content: center;
+  }
+
+  .conect-form button {
+    width: 200px;
+  }
+
+  .form {
+    padding: 20px;
+  }
+
+  .form input {
+    margin-top: 5px !important;
+  }
+
+  textarea {
+    margin-top: 5px;
+  }
+
+  .request-types {
+    margin-top: 0 !important;
+  } 
+
+  .request-types label {
+    font-size: 13px;
+  }
+
+  .faq {
+    margin-top: 20px;
+  }
+
+  .footer-top {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .footer-navigation, .footer-social, .footer-contact {
+    text-align: center;
+  }
+
+  footer .logo-name {
+    display: block;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    align-items: center;
+    
+  }
+}
+
+@media (max-width: 550px) {
+  body {
+    background: red;
+  }
+
+  .container {
+    width: 375px;
+    padding: 0px;
+  }
+
+  button {
+    padding: 10px;
+    height: 40px;
+    width: 100px !important;
+    font-size: 14px;
+  }
+
+  .title {
+    font-size: 20px;
+  }
+
+  .about span:first-child {
+    font-size: 15px;
+  }
+
+
+  .logo-name, .experience:last-child, header button, iframe {
+    display: none;
+  }
+
+  ul {
+    display: none !important;
+  }
+
+  .hero-container {
+    flex-direction: row;
+    margin-top: 50px;
+  }
+
+  .vasil-foto {
+  }
+
+  .vasil-foto img {
+    width: 300px;
+  }
+
+  .container-left {
+  }
+
+  .container-left .experience  {
+    margin-left: 45px !important;
+  }
+
+  .hero-main-text {
+    font-size: 30px;
+  }
+
+  .about-us {
+    height: 320px;
+  }
+
+  .about {
+    font-size: 12px !important;
+  }
+
+  .coment{
+    font-size: 10px;
+  }
+
+  #tab-buttons button{
+    margin-top: 10px;
+  }
+
+  h2 {
+    font-size: 16px !important;
+  }
+
+  h3 {
+    font-size: 14px !important;
+    margin-top: 0px !important;
+  }
+
+  h4 {
+    font-size: 12px !important;
+  }
+
+  h5 {
+    font-size: 12px;
+  }
+
+  li {
+    font-size: 10px !important;
+  }
+
+  .tab {
+    padding: 0;
+    flex-direction: column !important;
+  }
+
+  .tab-blocks  {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: -50px !important;
+    margin-left: 15px;
+  }
+
+  #tab-buttons button {
+    width: 100px !important;
+  }
+
+  .tab-blocks button {
+    display: none;
+  }
+
+  .tab-block {
+    width: 200px;
+  }
+
+  .what-is {
+    margin-top: 20px !important;
+  }
+
+  .tab-blocks button {
+    width: 200px;
+  }
+
+  .portfolio {
+    margin-top: 60px;
+  }
+
+  .swiper-slide {
+    margin-top: -100px !important;
+  }
+
+  .swiper-slide img {
+    display: none;
+  }
+
+  .case-right {
+    text-align: center;
+    margin-top: -70px;
+  }
+
+  .swiper-button-next, .swiper-button-prev {
+    margin-top: -100px !important;
+  }
+
+  .result-done {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .results, .done {
+    width: 300px;
+  }
+
+  .results li {
+    width: 76%;
+  }
+
+  .case-buttons button {
+    font-size: 15px;
+    height: 40px;
+  }
+
+  .case-buttons {
+    gap: 5px;
+  }
+
+  .conect-form {
+    margin-top: 0px;
+    justify-content: center;
+  }
+
+  .conect-form button {
+    width: 200px;
+  }
+
+  .form {
+    padding: 20px;
+  }
+
+  .form input {
+    margin-top: 5px !important;
+  }
+
+  textarea {
+    margin-top: 5px;
+  }
+
+  .request-types {
+    margin-top: 0 !important;
+  } 
+
+  .request-types label {
+    font-size: 13px;
+  }
+
+  .faq {
+    margin-top: 20px;
+  }
+
+  .footer-top {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .footer-navigation, .footer-social, .footer-contact {
+    text-align: center;
+    font-size: 10px;
+  }
+
+  footer .logo {
+    display: none;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    align-items: center;
+    font-size: 10px;
+  }
+}
