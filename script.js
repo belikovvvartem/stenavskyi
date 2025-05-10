@@ -172,3 +172,49 @@ window.addEventListener('click', function (e) {
       event.target.classList.remove("show");
     }
   }
+
+
+  // Блок правої кнопки
+document.addEventListener('contextmenu', e => e.preventDefault());
+
+// Блок клавіш (F12, Ctrl+Shift+I тощо)
+document.addEventListener('keydown', e => {
+  if (
+    e.key === 'F12' ||
+    (e.ctrlKey && e.shiftKey && ['I', 'J', 'C', 'U'].includes(e.key.toUpperCase())) ||
+    (e.ctrlKey && ['S', 'U'].includes(e.key.toUpperCase()))
+  ) {
+    e.preventDefault();
+    e.stopPropagation();
+    window.close();
+  }
+});
+
+// Перевірка DevTools через вимірювання часу
+(function detectDevTools() {
+  const threshold = 160;
+  let devtoolsOpen = false;
+
+  setInterval(() => {
+    const start = new Date();
+    debugger; // може викликати затримку
+    const end = new Date();
+    if (end - start > threshold) {
+      devtoolsOpen = true;
+      document.body.innerHTML = '';
+      alert("DevTools виявлено. Сторінку буде закрито.");
+      window.open('', '_self', '');
+      window.close();
+    }
+  }, 1000);
+})();
+
+// Перевірка розміру вікна (DevTools зменшує область перегляду)
+setInterval(() => {
+  if (window.outerWidth - window.innerWidth > 100) {
+    document.body.innerHTML = '';
+    alert("DevTools виявлено. Сторінку буде закрито.");
+    window.open('', '_self', '');
+    window.close();
+  }
+}, 1000);
