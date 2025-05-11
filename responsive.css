@@ -324,6 +324,7 @@
 }
 
 @media (max-width: 550px) {
+
   body {
     background: red;
   }
@@ -353,7 +354,7 @@
     display: none;
   }
 
-  ul {
+  header ul {
     display: none !important;
   }
 
@@ -439,7 +440,11 @@
   }
 
   .tab-block {
-    width: 200px;
+    width: 120px;
+  }
+
+  .tab-block ul {
+    width: 120px !important;
   }
 
   .what-is {
@@ -451,7 +456,7 @@
   }
 
   .portfolio {
-    margin-top: 60px;
+    margin-top: 100px;
   }
 
   .swiper-slide {
@@ -464,11 +469,17 @@
 
   .case-right {
     text-align: center;
-    margin-top: -70px;
+    margin-top: -150px;
+  }
+
+  .swiper-button-next:after, .swiper-button-prev:after {
+    font-size: 25px !important;
   }
 
   .swiper-button-next, .swiper-button-prev {
-    margin-top: -100px !important;
+    margin-top: -190px !important;
+    margin-left: -15px;
+    margin-right: -15px;
   }
 
   .result-done {
@@ -490,46 +501,76 @@
   }
 
   .case-buttons {
-    gap: 5px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .btn {
+    width: 130px !important;
   }
 
   .conect-form {
-    margin-top: 0px;
+    margin-top: -100px;
     justify-content: center;
+    padding: 0;
   }
 
   .conect-form button {
-    width: 200px;
+    width: 180px !important;
   }
 
   .form {
     padding: 20px;
+    border-radius: 35px;
   }
 
   .form input {
     margin-top: 5px !important;
+    height: 45px !important;
+  }
+
+  input::placeholder {
+    font-size: 15px;
   }
 
   textarea {
     margin-top: 5px;
+    height: 150px !important;
+  }
+
+  textarea::placeholder {
+    font-size: 15px;
   }
 
   .request-types {
     margin-top: 0 !important;
+    width: 112%;
+    margin-left: -20px !important;
   } 
 
   .request-types label {
-    font-size: 13px;
+    font-size: 12px;
+    height: 15px;
   }
 
   .faq {
     margin-top: 20px;
   }
 
+  footer {
+    margin-top: -50px;
+  }
+
   .footer-top {
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
     align-items: center;
     gap: 20px;
+  }
+
+  .footer-navigation, .footer-social {
+    width: 140px;
+    height: 100px;
   }
 
   .footer-navigation, .footer-social, .footer-contact {
@@ -545,5 +586,6 @@
     flex-direction: column;
     align-items: center;
     font-size: 10px;
+    height: 70px;
   }
 }
