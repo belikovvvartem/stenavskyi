@@ -1104,12 +1104,12 @@ p a {
     background: none;
     border: none;
     font-size: 50px;
-    cursor: pointer;
-    width: 60px;       
+    cursor: pointer;   
     height: 60px;
     line-height: 1px; 
-    text-align: center; 
+    text-align: end; 
     color: #fff;
+    margin-top: -10px;
 }
 
 
