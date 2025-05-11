@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Victor+Mono:ital,wght@0,100..700;1,100..700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
 @import url(https://fonts.googleapis.com/css2?family=Audiowide&display=swap);
 @import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
@@ -13,10 +12,8 @@
     --gray-color: #3b3a3a;
     --main-font: "Victor Mono", monospace;
     --fatty-font: "Dela Gothic One", sans-serif;
-    --number-font: "Oswald", sans-serif;
     --stenavskyi-font: 'Audiowide', display;
     scroll-behavior: smooth;
-
     --card-height: 200px;
     --card-width: calc(var(--card-height) / 1.5);
 }
@@ -224,7 +221,6 @@ ul li a:hover {
     font-size: 45px;
     font-weight: 100;
     color: var(--yellow-color);
-    font-family: var(--number-font);
 }
 
 .experience {
