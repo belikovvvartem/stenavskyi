@@ -343,13 +343,14 @@
 
 @media (max-width: 550px) {
   body {
-    width: 375px !important;
     margin: 0 auto;
   }
 
   .container {
-    width: 375px;
-    padding: 0px;
+    width: 100%;
+    max-width: 375px;
+    margin: 0 auto;
+    padding: 0;
   }
 
   button {
