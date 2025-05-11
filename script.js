@@ -198,7 +198,20 @@ window.addEventListener('click', function (e) {
     });
   });
 
-  
+  const toggleBtn = document.getElementById("menu-toggle");
+  const mobileMenu = document.getElementById("mobile-menu");
+
+  toggleBtn.addEventListener("click", () => {
+    mobileMenu.classList.toggle("active");
+    toggleBtn.textContent = mobileMenu.classList.contains("active") ? "✖" : "☰";
+  });
+
+  mobileMenu.querySelectorAll("a, button").forEach(el => {
+    el.addEventListener("click", () => {
+      mobileMenu.classList.remove("active");
+      toggleBtn.textContent = "☰";
+    });
+  });
 
 //   // Блок правої кнопки
 // document.addEventListener('contextmenu', e => e.preventDefault());

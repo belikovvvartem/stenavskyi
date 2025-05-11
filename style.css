@@ -469,92 +469,93 @@ ul li a:hover {
     display: none;
     opacity: 0;
     transition: opacity 0.3s ease;
-  }
-  
-  .tab.active {
+}
+
+.tab.active {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-start;
     opacity: 1;
-  }
-  
-  .tab-text > * {
+}
+
+.tab-text>* {
     opacity: 0;
     transform: translateX(60px);
     animation-fill-mode: forwards;
-  }
-  
-  .tab-title {
+}
+
+.tab-title {
     animation: slideLeft 0.8s ease forwards;
     animation-delay: 0.2s;
-  }
-  
-  .tab-description {
+}
+
+.tab-description {
     animation: slideLeft 0.8s ease forwards;
     animation-delay: 0.5s;
-  }
-  
-  .what-is,
-  .tab-full-description {
+}
+
+.what-is,
+.tab-full-description {
     animation: slideLeft 0.8s ease forwards;
     animation-delay: 0.9s;
-  }
-  
-  @keyframes slideLeft {
+}
+
+@keyframes slideLeft {
     to {
-      opacity: 1;
-      transform: translateX(0);
+        opacity: 1;
+        transform: translateX(0);
     }
-  }
-  
-  .tab-blocks > * {
+}
+
+.tab-blocks>* {
     opacity: 0;
     transform: translateX(-60px);
     animation-fill-mode: forwards;
-  }
-  
-  .tab-blocks .tab-block:nth-child(1) {
+}
+
+.tab-blocks .tab-block:nth-child(1) {
     animation: slideRight 0.8s ease forwards;
     animation-delay: 1s;
-  }
-  
-  .tab-blocks .tab-block:nth-child(2) {
+}
+
+.tab-blocks .tab-block:nth-child(2) {
     animation: slideRight 0.8s ease forwards;
     animation-delay: 1.4s;
-  }
-  
-  .tab-blocks button {
+}
+
+.tab-blocks button {
     animation: slideRight 0.8s ease forwards;
     animation-delay: 1.8s;
-  }
-  
-  @keyframes slideRight {
-    to {
-      opacity: 1;
-      transform: translateX(0);
-    }
-  }
+}
 
-  #tab-buttons button {
-    transition: background 0.3s ease;
-  }
-  
-  .tab:not(.active) {
-    transform: scale(0.95);
-  }
-  
-  
-  @keyframes appearCenter {
-    from {
-      opacity: 0;
-      transform: scale(0.9);
-    }
+@keyframes slideRight {
     to {
-      opacity: 1;
-      transform: scale(1);
+        opacity: 1;
+        transform: translateX(0);
     }
-  }
+}
+
+#tab-buttons button {
+    transition: background 0.3s ease;
+}
+
+.tab:not(.active) {
+    transform: scale(0.95);
+}
+
+
+@keyframes appearCenter {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
 
 
 
@@ -933,7 +934,8 @@ p a {
 }
 
 .results,
-.done, .tab-block {
+.done,
+.tab-block {
     padding: 20px;
     width: 250px;
     margin-top: 10px;
@@ -967,7 +969,8 @@ p a {
     z-index: 0;
 }
 
-.case-right h2, .tab-title {
+.case-right h2,
+.tab-title {
     font-family: var(--fatty-font);
     text-transform: uppercase;
     font-size: 35px;
@@ -976,13 +979,15 @@ p a {
     -webkit-text-fill-color: transparent;
 }
 
-.case-right h3, .tab-description {
+.case-right h3,
+.tab-description {
     margin-top: -25px;
     font-size: 16px;
 }
 
 .results h4,
-.done h4, .tab h4 {
+.done h4,
+.tab h4 {
     margin: 0 0 10px 0;
     color: var(--main-color);
     font-size: 19px;
@@ -990,7 +995,8 @@ p a {
 }
 
 .results ul,
-.done ul, .tab ul {
+.done ul,
+.tab ul {
     list-style-position: inside;
     margin: 0;
     padding: 0;
@@ -998,7 +1004,8 @@ p a {
 }
 
 .results li,
-.done li, .tab li {
+.done li,
+.tab li {
     margin-bottom: 5px;
     display: flex;
     justify-content: space-between;
@@ -1058,23 +1065,6 @@ p a {
     z-index: 1001;
 }
 
-@media (max-width: 768px) {
-
-    .case-left,
-    .case-right {
-        flex: none;
-        width: 100%;
-    }
-
-    .case {
-        flex-direction: column;
-    }
-
-    .case-right {
-        padding-left: 0;
-        margin-top: 20px;
-    }
-}
 
 
 #notification {
@@ -1105,4 +1095,43 @@ p a {
 
 #notification button {
     margin-top: 10px;
+}
+
+.menu-toggle {
+    display: none;
+    z-index: 1001;
+    background: none;
+    border: none;
+    font-size: 50px;
+    cursor: pointer;
+    width: 60px;       
+    height: 60px;
+    line-height: 1px; 
+    text-align: center; 
+    color: #fff;
+}
+
+
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 8px 32px 0 rgba(255, 255, 255, 0.37);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 25px;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    z-index: 1000;
+}
+
+.mobile-menu.active {
+    display: flex;
 }

@@ -114,6 +114,13 @@
     width: 550px;
     padding: 0px;
   }
+  nav ul {
+    display: none;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
 
   button {
     padding: 10px;
@@ -312,6 +319,25 @@
   .footer-bottom {
     flex-direction: column;
     align-items: center;
+  }
+
+  .case-left,
+  .case-right {
+      flex: none;
+      width: 100%;
+  }
+
+  .case {
+      flex-direction: column;
+  }
+
+  .case-right {
+      padding-left: 0;
+      margin-top: 20px;
+  }
+
+  .mobile-menu button {
+    display: block;
   }
 }
 
