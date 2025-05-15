@@ -6,8 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>STENAVSKYI</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="animation.css">
     <link rel="stylesheet" href="responsive.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
     <link rel="shortcut icon" href="./favicon.png" type="image/x-icon">
 </head>
 
@@ -18,7 +20,6 @@
             <header id="Home">
                 <div class="logo">
                     <img src="./src/logo.svg" alt="Стенавський" class="logo-img">
-                    <h1 class="logo-name">STENAVSKYI</h1>
                 </div>
                 <nav>
                     <ul>
@@ -59,11 +60,11 @@
             <section class="hero">
                 <div class="hero-container">
                     <div class="hero-main-text">
-                        <h1>stenavskyi</h1>
+                        <h1>THE STENAVSKYI AGENCY</h1>
                     </div>
                     <div class="container-left">
 
-                        <div class="experience">
+                        <div class="experience" data-aos="fade-right" data-aos-delay="200">
                             <div class="job">Маркетолог</div>
                             <h3>Розкручує ваш <br> продукт ефективно</h3>
                             <div class="square"></div>
@@ -72,19 +73,19 @@
                             </div>
                         </div>
 
-                        <div class="budget">
+                        <div class="budget" data-aos="fade-right" data-aos-delay="300">
                             <div class="number">500.000$+</div>
-                            <h3>відкрученого бюджету — максимальна ефективність</h3>
+                            <h3>відкрученого <br> бюджету — максимальна ефективність</h3>
                         </div>
                     </div>
-                    <div class="vasil-foto">
+                    <div class="vasil-foto" data-aos="zoom-in" data-aos-delay="200" >
                         <img src="./src/vasil-stenavskyi.png" alt="Василь Стенавський">
                     </div>
                     <div class="container-right">
 
-                        <div class="experience">
+                        <div class="experience" data-aos="fade-left" data-aos-delay="200">
                             <div class="square"></div>
-                            <div class="job">Просування, яке працює:</div>
+                            <div class="job">Просування, <br> яке працює:</div>
                             <h3>таргетинг, SMM, <br> боти та лендінги</h3>
                         </div>
                     </div>
@@ -93,7 +94,7 @@
         </main>
         <section class="about-us" id="About">
             <h1 class="about-title title">Про нас</h1>
-            <h4 class="about"><span>STENAVSKYI Agency</span> — це команда професіоналів із <span>4-річним
+            <h4 class="about" data-aos="zoom-in" data-aos-delay="200" ><span>STENAVSKYI Agency</span> — це команда професіоналів із <span>4-річним
                     досвідом</span> у сфері
                 <span>digital-маркетингу</span>. Ми допомагаємо бізнесам зростати, привертати увагу клієнтів і будувати
                 сильну
@@ -111,6 +112,42 @@
                 <div></div>
             </div>
         </section>
+
+
+
+        <section class="no-effort-needed">
+            <h1 class="no-effort-needed-title title">З нами тобі не доведеться</h1>
+            <div class="arguments">
+                <div class="argument" data-aos="fade-right" data-aos-delay="200"  >
+                    <div class="argument-text"  >
+                      <span>Зливати свій бюджет</span> — завдяки брифу точно визначимо аудиторію, яка готова купувати твій продукт
+                    </div>
+                  </div>
+                  
+                  <div class="argument" data-aos="fade-left"data-aos-delay="200"   >
+                    <div class="argument-text" >
+                      <span>Створювати креативи</span> — створимо рекламний банер, у якому буде точно відображено твою УТП
+                    </div>
+                  </div>
+                  
+                  <div class="argument" data-aos="fade-right" data-aos-delay="300"  >
+                    <div class="argument-text" >
+                      <span>Шукати клієнтів</span> — запущу рекламу, яка буде найефективнішим методом збільшення клієнтів
+                    </div>
+                  </div>
+                  
+                  <div class="argument" data-aos="fade-left"data-aos-delay="300"   >
+                    <div class="argument-text">
+                      <span>Боротися з блокуванням</span> — ми допоможемо тобі не допустити блокувань рекламного кабінету Facebook або вийти з неї
+                    </div>
+                  </div>
+              </div>
+        </section>
+
+
+
+
+
         <section class="services" id="Services">
             <h1 class="services-title title">Послуги</h1>
             <div id="tabs">
@@ -119,20 +156,21 @@
                     <button data-tab="smm">SMM</button>
                     <button data-tab="automatic">Автоматика</button>
                     <button data-tab="landing">Лендінги</button>
-                    <button data-tab="tiktok">TikTok Ads</button>
                 </div>
 
                 <div id="tab-content">
                     <div class="tab active" id="target">
-                        <div class="tab-text">
-                            <h2 class="tab-title">Таргетована реклама (FB, Inst)</h2>
-                            <h3 class="tab-description">Отримуй клієнтів з перших днів запуску</h3>
+                        <div class="tab-text" data-aos="fade-right" data-aos-delay="200">
+                            <h2 class="tab-title">Таргетована реклама <br>(FaceBook, Instagram, TikTok)</h2>
+                            <h3 class="tab-description">Хочеш отримувати заявки вже з перших днів запуску реклами?
+                                Таргетована реклама — це найефективніший спосіб залучення нових клієнтів без зайвих витрат. Ми показуємо твою пропозицію лише тим, хто вже цікавився схожими товарами або послугами. Ніяких випадкових переглядів, тільки чітке попадання в цільову аудиторію.</h3>
                             <h4 class="what-is">Що це таке?</h4>
-                            <h3 class="tab-full-description">Це реклама в соцмережах, яка показується точно твоїй
-                                цільовій аудиторії. Вона з’являється в Instagram, Facebook, TikTok або інших платформах
-                                тим, хто зацікавлений у твоїх послугах чи товарах.</h3>
+                            <h3 class="tab-full-description">Це реклама, яка працює у Facebook, Instagram, TikTok або інших соцмережах і бачать її лише ті люди, які вже готові купувати.
+                                Ми налаштовуємо рекламні кампанії так, щоб твій бізнес почав приносити результат вже з першого тижня запуску.
+                                Кожна гривня витрачається розумно — ти бачиш повну аналітику, реальні результати та зростання продажів.
+                                </h3>
                         </div>
-                        <div class="tab-blocks">
+                        <div class="tab-blocks" data-aos="fade-left" data-aos-delay="200">
                             <div class="tab-block">
                                 <h4 class="block-title">Переваги:</h4>
                                 <ul>
@@ -245,40 +283,62 @@
                             <button>Хочу лендінг</button>
                         </div>
                     </div>
-                    <div class="tab" id="tiktok">
-                        <div class="tab-text">
-                            <h2 class="tab-title">TikTok ADS</h2>
-                            <h3 class="tab-description">Реклама, яка привертає увагу й продає</h3>
-                            <h4 class="what-is">Що це таке?</h4>
-                            <h3 class="tab-full-description">Це просування твого продукту через TikTok — найпотужнішу
-                                платформу для залучення молодої аудиторії. Ми створюємо креативи, запускаємо рекламу й
-                                приводимо клієнтів.</h3>
-                        </div>
-                        <div class="tab-blocks">
-                            <div class="tab-block">
-                                <h4 class="block-title">Переваги:</h4>
-                                <ul>
-                                    <li>Швидкий результат</li>
-                                    <li>Вірусне охоплення</li>
-                                    <li>Точна аудиторія</li>
-                                    <li>Максимум ефект</li>
-                                </ul>
-                            </div>
-                            <div class="tab-block">
-                                <h4 class="block-title">Кому підходить:</h4>
-                                <ul>
-                                    <li>Онлайн-магазинам</li>
-                                    <li>Курсам та експертам</li>
-                                    <li>Послугам</li>
-                                    <li>Новим брендам</li>
-                                </ul>
-                            </div>
-                            <button>Хочу TikTok Ads</button>
-                        </div>
-                    </div>
                 </div>
             </div>
         </section>
+
+
+
+
+
+
+
+        <section class="reasons-section">
+            <h1 class="reasons-title title" data-aos="zoom-in" >6 ПРИЧИН ПРАЦЮВАТИ З НАМИ</h1>
+            <div class="reasons-list">
+              <div class="reason-card" data-aos="fade-right" data-aos-delay="200" >
+                <div class="reason-number">1</div>
+                <div class="reason-text">Виконуємо роботу <br> у встановлені строки</div>
+              </div>
+              <div class="reason-card" data-aos="fade-left"  data-aos-delay="200" >
+                <div class="reason-number">2</div>
+                <div class="reason-text">Завжди на зв'язку 24/7</div>
+              </div>
+              <div class="reason-card" data-aos="fade-right" data-aos-delay="300" >
+                <div class="reason-number" >3</div>
+                <div class="reason-text">Надаємо щомісячні звіти <br> про виконану роботу</div>
+              </div>
+              <div class="reason-card" data-aos="fade-left"  data-aos-delay="300" >
+                <div class="reason-number">4</div>
+                <div class="reason-text">Проводимо консультації щодо упаковки бізнесу на різних платформах</div>
+              </div>
+              <div class="reason-card" data-aos="fade-right" data-aos-delay="400" >
+                <div class="reason-number">5</div>
+                <div class="reason-text">Працюємо за договором як додатковою гарантією зобов'язань обох сторін</div>
+              </div>
+              <div class="reason-card" data-aos="fade-left"  data-aos-delay="400" >
+                <div class="reason-number">6</div>
+                <div class="reason-text">Надаємо всі закриваючі документи, необхідні для бухгалтерії</div>
+              </div>
+            </div>
+          
+            <div class="reasons-cta" data-aos="slide-up" data-aos-delay="500">
+              <button class="reasons-button">Залишити заявку</button>
+            </div>
+            <div class="about-decoration">
+                <div></div>
+                <div></div>
+            </div>
+          </section>
+
+
+
+
+
+
+
+
+
         <section class="portfolio" id="Portfolio">
             <h1 class="portfolio-title title">Портфоліо</h1>
 
@@ -426,40 +486,47 @@
             <img class="modal-content" src="./src/case/inside/case-inside.png" alt="Інсайд кейсу POP MEBLI"
                 loading="lazy">
         </div>
-        <section class="conect-form" id="Contact">
-            <h1 class="form-title title">Звʼяжіться зі мною — обговоримо ваш проєкт</h1>
-            <div class="form">
-                <form id="contact-form">
-                    <input type="text" id="name" name="name" placeholder="Ім’я*" required maxlength="20"
-                        autocomplete="off" />
+        <section class="contact-section" id="Contact">
 
-                    <input type="tel" id="phone" name="phone" required maxlength="16" placeholder="Номер телефону"
-                        autocomplete="off" />
-
-
-                    <textarea id="comment" name="comment" placeholder="Коментар (необов’язково)"></textarea>
-                    <div class="request-types">
-                        <input type="radio" id="consultation" name="type" value="Консультація" />
-                        <label for="consultation">Консультація</label>
-
-                        <input type="radio" id="strategy" name="type" value="Стратегія просування" />
-                        <label for="strategy">Стратегія просування</label>
-
-                        <input type="radio" id="launch" name="type" value="Запуск нового продукту" />
-                        <label for="launch">Запуск нового продукту</label>
-
-                        <input type="radio" id="other" name="type" value="Інше" />
-                        <label for="other">Інше</label>
+            <h1 class="contact-title title">Все ще вагаєшся, працювати з нами чи ні?</h1>
+            <h3 class="contact-subtitle">
+              Залишай заявку — ми проведемо безплатну консультацію твого бізнесу, в результаті якої ти:
+            </h3>
+          
+            <div class="benefits-cards">
+                <div class="benefit-card">
+                    <div class="benefit-number">1</div>
+                    <div class="benefit-text">
+                      Дізнаєшся<br>
+                      як покращити свої<br>
+                      рекламні кампанії та прибутки
                     </div>
-
-                    <button type="submit">Надіслати запит</button>
-                </form>
+                  </div>
+                  <div class="benefit-card">
+                    <div class="benefit-number">2</div>
+                    <div class="benefit-text">
+                      Дізнаєшся<br>
+                      як красиво оформити<br>
+                      свій профіль в Instagram
+                    </div>
+                  </div>
+                  <div class="benefit-card">
+                    <div class="benefit-number">3</div>
+                    <div class="benefit-text">
+                      Дізнаєшся<br>
+                      як грамотно наймати<br>
+                      SMM-спеціаліста в команду
+                    </div>
+                  </div>
             </div>
-            <iframe
-                src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d760.4158232451143!2d23.76720017277677!3d48.11750701520821!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNDjCsDA3JzAzLjgiTiAyM8KwNDYnMDMuMyJF!5e1!3m2!1sru!2sua!4v1746557905654!5m2!1sru!2sua"
-                width="500" height="738" style="border:0;" allowfullscreen="" loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </section>
+          
+            <form id="contact-form" class="contact-form">
+              <input type="text" id="name" name="name" placeholder="Ім’я*" required maxlength="20" autocomplete="off" />
+              <input type="tel" id="phone" name="phone" required maxlength="16" placeholder="Номер телефону*" autocomplete="off" />
+              <div class="contact-form-btn"><button type="submit">Залишити заявку</button></div>
+            </form>
+          
+          </section>
         <div id="notification" style="display: none;">
             <div id="notification-content">
                 <p id="notification-text"></p>
@@ -658,6 +725,13 @@
 
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="./script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init();
+  AOS.init({
+  once: true
+});
+</script>
 </body>
 
 </html>
