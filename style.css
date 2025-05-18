@@ -37,7 +37,7 @@ body {
     font-weight: 700;
     font-style: normal;
     user-select: none;
-    background: #ff0000;
+    background: #000000;
     overflow-x: hidden;
     touch-action: manipulation;
 }
