@@ -40,6 +40,13 @@ document.querySelector('.contact-us').addEventListener('click', function () {
     });
 });
 
+document.querySelector('.reasons-button').addEventListener('click', function () {
+    document.querySelector('#Contact').scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+    });
+});
+
 document.querySelector('.logo-footer').addEventListener('click', function () {
     document.querySelector('#Home').scrollIntoView({
         behavior: 'smooth',
