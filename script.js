@@ -65,7 +65,6 @@ document.addEventListener('DOMContentLoaded', function () {
     const notificationText = document.getElementById('notification-text');
     const closeBtn = document.getElementById('close-notification');
 
-    // Авто-плюс
     phoneInput.addEventListener('focus', () => {
         if (!phoneInput.value.startsWith('+')) {
             phoneInput.value = '+' + phoneInput.value.replace(/\D/g, '');
@@ -180,15 +179,20 @@ window.addEventListener('click', function (e) {
   const buttons = document.querySelectorAll('#tab-buttons button');
   const tabs = document.querySelectorAll('.tab');
 
-  buttons.forEach(button => {
-    button.addEventListener('click', () => {
-      const targetId = button.dataset.tab;
-
-      tabs.forEach(tab => {
-        tab.classList.remove('active');
+  document.addEventListener('DOMContentLoaded', () => {
+    const buttons = document.querySelectorAll('#tab-buttons button');
+    const tabs = document.querySelectorAll('.tab');
+  
+    buttons.forEach(button => {
+      button.addEventListener('click', () => {
+        const targetId = button.dataset.tab;
+  
+        tabs.forEach(tab => {
+          tab.classList.remove('active');
+        });
+  
+        document.getElementById(targetId).classList.add('active');
       });
-
-      document.getElementById(targetId).classList.add('active');
     });
   });
 
