@@ -36,7 +36,7 @@ body {
     font-weight: 700;
     font-style: normal;
     user-select: none;
-    background: #000000;
+    background: #ff0000;
     overflow-x: hidden;
 }
 
@@ -128,12 +128,13 @@ header {
 .logo {
     display: flex;
     justify-content: space-between;
-    gap: 0px;
+    gap: 5px;
+    width: 200px !important;
 }
 
 .logo-name {
     font-size: 25px;
-    text-align: left;
+    font-weight: 500;
 }
 
 nav ul {
@@ -982,8 +983,12 @@ p a {
     justify-content: space-between;
     margin-top: 20px;
     border-top: 4px solid var(--gray-color);
+    font-weight: 400;
 }
 
+footer a, .social-name {
+    font-weight: 400;
+}
 
 .modal {
     display: none;

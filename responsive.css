@@ -12,17 +12,31 @@
 
   .logo-name,
   header button,
-  .experience:last-child,
-  iframe {
+  .experience:last-child {
     display: none;
+  }
+
+  .hero-main-text {
+    font-size: 32px;
+    margin-top: 30px;
   }
 
   .about {
     font-size: 20px;
   }
 
+  .arguments {
+    gap: 20px;
+    width: 100%;
+  }
+
+  .argument {
+    padding: 25px !important;
+  }
+
   #tab-buttons button {
     margin-top: 10px;
+    width: 300px;
   }
 
   h2 {
@@ -87,12 +101,61 @@
     gap: 5px;
   }
 
-  .conect-form {
-    margin-top: 0px;
-    justify-content: center;
+  .reasons-button {
+    width: 200px;
   }
 
-  .conect-form button {
+  .reason-card {
+    width: 320px;
+    height: 65px;
+    padding: 15px;
+  }
+
+  .reason-card br {
+    display: none;
+  }
+
+  .benefits-cards {
+    gap: 20px;
+  }
+
+  .benefit-card {
+    width: 310px;
+  }
+
+  .benefit-card:nth-child(3) {
+    flex-direction: row;
+    align-items: center;
+    height: 20px;
+    width: 100%;
+    gap: 20px;
+  }
+
+  .benefit-card:nth-child(3) .benefit-number {
+    margin: 0 auto;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .benefit-card:nth-child(3) br {
+    display: none;
+  }
+
+  form {
+    flex-wrap: wrap;
+  }
+
+  form input {
+    width: 352px !important;
+    box-sizing: border-box;
+  }
+
+  .contact-form-btn {
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  .contact-form-btn button {
     width: 200px;
   }
 
@@ -130,7 +193,7 @@
   }
 
   .title {
-    font-size: 30px;
+    font-size: 27px;
   }
 
   .logo-name,
@@ -169,7 +232,12 @@
   }
 
   .hero-main-text {
-    font-size: 40px;
+    font-size: 22px;
+    margin-top: 20px;
+  }
+
+  .arguments {
+    gap: 20px;
   }
 
   .about {
@@ -227,7 +295,7 @@
   }
 
   .swiper-slide {
-    margin-top: -100px !important;
+    margin-top: -150px !important;
   }
 
   .swiper-slide img {
@@ -258,46 +326,93 @@
     width: 76%;
   }
 
+  .btn {
+    width: 150px !important;
+  }
+
   .case-buttons button {
     font-size: 15px;
     height: 40px;
+    max-width: 150px !important;
   }
 
   .case-buttons {
     gap: 5px;
   }
 
-  .conect-form {
+  .reason-card {
+    width: 100%;
+  }
+
+  .reason-card br {
+    display: none;
+  }
+
+  .reasons-button {
+    width: 200px;
+    margin-bottom: 50px;
+  }
+
+  .contact-form {
     margin-top: 0px;
+  }
+
+  .benefits-cards {
+    gap: 20px;
     justify-content: center;
   }
 
-  .conect-form button {
-    width: 200px;
+  .benefit-number {
+    font-size: 20px;
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    margin-bottom: 0px;
   }
 
-  .form {
-    padding: 20px;
+  .benefit-card {
+    flex-direction: row;
+    align-items: center;
+    height: 55px;
+    padding: 0 15px;
+    width: 90%;
+    gap: 20px;
+    font-size: 12px;
   }
 
-  .form input {
-    margin-top: 5px !important;
+  .benefit-card br {
+    display: none;
   }
 
-  textarea {
-    margin-top: 5px;
+  form {
+    flex-wrap: wrap;
+    padding: 0 15px;
   }
 
-  .request-types {
-    margin-top: 0 !important;
+  form input {
+    width: 40% !important;
+    height: 55px !important;
+    font-size: 15px !important;
   }
 
-  .request-types label {
-    font-size: 13px;
+  .contact-form-btn {
+    width: 100%;
+    margin-top: 20px;
   }
+
+  .contact-form-btn button {
+    font-size: 15px;
+  }
+
+
+
 
   .faq {
     margin-top: 20px;
+  }
+
+  .question h2 {
+    font-size: 18px !important;
   }
 
   .footer-top {
@@ -357,7 +472,7 @@
   button {
     padding: 10px;
     height: 40px;
-    width: 100px !important;
+    max-width: 200px !important;
     font-size: 14px;
   }
 
@@ -389,7 +504,7 @@
   }
 
   .hero-main-text {
-    font-size: 25px;
+    font-size: 15px;
   }
 
   .experience:last-child {
@@ -567,54 +682,43 @@
     width: 130px !important;
   }
 
-  .conect-form {
+  .contact-section {
     margin-top: -100px;
-    justify-content: center;
-    padding: 0;
+    margin-bottom: 100px;
   }
 
-  .conect-form button {
-    width: 180px !important;
-  }
-
-  .form {
-    padding: 20px;
-    border-radius: 35px;
-  }
-
-  .form input {
-    margin-top: 5px !important;
-    height: 45px !important;
-    font-size: 15px !important;
-  }
-
-  input::placeholder {
-    font-size: 15px;
-  }
-
-  textarea {
-    margin-top: 5px;
-    height: 150px !important;
-    font-size: 15px;
-  }
-
-  textarea::placeholder {
-    font-size: 15px;
-  }
-
-  .request-types {
-    margin-top: 0 !important;
-    width: 112%;
-    margin-left: -20px !important;
-  }
-
-  .request-types label {
-    font-size: 12px;
-    height: 15px;
-  }
 
   .faq {
     margin-top: 20px;
+  }
+
+  .question h2 {
+    font-size: 14px !important;
+  }
+
+  .argument {
+    padding: 20px !important;
+    height: 60px;
+  }
+
+  .argument-text span {
+    font-size: 15px;
+  }
+
+  .argument-text {
+    font-size: 12px;
+  }
+
+  .reason-number {
+    font-size: 30px;
+  }
+
+  .reason-text {
+    font-size: 15px;
+  }
+
+  .reasons-button  {
+    max-width: 300px;
   }
 
   footer {
