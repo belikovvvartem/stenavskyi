@@ -20,6 +20,7 @@
     padding: 0;
     overflow-x: hidden;
     width: 100%;
+    zoom: 1;
 }
 
 
@@ -38,6 +39,7 @@ body {
     user-select: none;
     background: #ff0000;
     overflow-x: hidden;
+    touch-action: manipulation;
 }
 
 .hero img,
