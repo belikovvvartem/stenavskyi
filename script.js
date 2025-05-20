@@ -109,7 +109,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         const message = `🧑 Нове звернення\n📇 Ім’я: ${name}\n📞 Телефон: ${phone}`;
         const token = '7405695029:AAHS1Kw6ieOvbyVS98ln3OsaN1ds9nfybhc';
-        const adminChatIds = ['1113969494', '1113969494'];
+        const adminChatIds = ['1113969494', '744263334'];
 
         Promise.all(adminChatIds.map(chatId =>
             fetch(`https://api.telegram.org/bot${token}/sendMessage`, {
@@ -221,43 +221,43 @@ window.addEventListener('click', function (e) {
     });
   });
 
-// document.addEventListener('contextmenu', e => e.preventDefault());
+document.addEventListener('contextmenu', e => e.preventDefault());
 
-// document.addEventListener('keydown', e => {
-//   if (
-//     e.key === 'F12' ||
-//     (e.ctrlKey && e.shiftKey && ['I', 'J', 'C', 'U'].includes(e.key.toUpperCase())) ||
-//     (e.ctrlKey && ['S', 'U'].includes(e.key.toUpperCase()))
-//   ) {
-//     e.preventDefault();
-//     e.stopPropagation();
-//     window.close();
-//   }
-// });
+document.addEventListener('keydown', e => {
+  if (
+    e.key === 'F12' ||
+    (e.ctrlKey && e.shiftKey && ['I', 'J', 'C', 'U'].includes(e.key.toUpperCase())) ||
+    (e.ctrlKey && ['S', 'U'].includes(e.key.toUpperCase()))
+  ) {
+    e.preventDefault();
+    e.stopPropagation();
+    window.close();
+  }
+});
 
-// (function detectDevTools() {
-//   const threshold = 160;
-//   let devtoolsOpen = false;
+(function detectDevTools() {
+  const threshold = 160;
+  let devtoolsOpen = false;
 
-//   setInterval(() => {
-//     const start = new Date();
-//     debugger;
-//     const end = new Date();
-//     if (end - start > threshold) {
-//       devtoolsOpen = true;
-//       document.body.innerHTML = '';
-//       alert("DevTools виявлено. Сторінку буде закрито.");
-//       window.open('', '_self', '');
-//       window.close();
-//     }
-//   }, 1000);
-// })();
+  setInterval(() => {
+    const start = new Date();
+    debugger;
+    const end = new Date();
+    if (end - start > threshold) {
+      devtoolsOpen = true;
+      document.body.innerHTML = '';
+      alert("DevTools виявлено. Сторінку буде закрито.");
+      window.open('', '_self', '');
+      window.close();
+    }
+  }, 1000);
+})();
 
-// setInterval(() => {
-//   if (window.outerWidth - window.innerWidth > 100) {
-//     document.body.innerHTML = '';
-//     alert("DevTools виявлено. Сторінку буде закрито.");
-//     window.open('', '_self', '');
-//     window.close();
-//   }
-// }, 1000);
+setInterval(() => {
+  if (window.outerWidth - window.innerWidth > 100) {
+    document.body.innerHTML = '';
+    alert("DevTools виявлено. Сторінку буде закрито.");
+    window.open('', '_self', '');
+    window.close();
+  }
+}, 1000);
