@@ -221,43 +221,66 @@ window.addEventListener('click', function (e) {
     });
   });
 
-document.addEventListener('contextmenu', e => e.preventDefault());
+// document.addEventListener('contextmenu', e => e.preventDefault());
 
-document.addEventListener('keydown', e => {
-  if (
-    e.key === 'F12' ||
-    (e.ctrlKey && e.shiftKey && ['I', 'J', 'C', 'U'].includes(e.key.toUpperCase())) ||
-    (e.ctrlKey && ['S', 'U'].includes(e.key.toUpperCase()))
-  ) {
-    e.preventDefault();
-    e.stopPropagation();
-    window.close();
-  }
+// document.addEventListener('keydown', e => {
+//   if (
+//     e.key === 'F12' ||
+//     (e.ctrlKey && e.shiftKey && ['I', 'J', 'C', 'U'].includes(e.key.toUpperCase())) ||
+//     (e.ctrlKey && ['S', 'U'].includes(e.key.toUpperCase()))
+//   ) {
+//     e.preventDefault();
+//     e.stopPropagation();
+//     window.close();
+//   }
+// });
+
+// (function detectDevTools() {
+//   const threshold = 160;
+//   let devtoolsOpen = false;
+
+//   setInterval(() => {
+//     const start = new Date();
+//     debugger;
+//     const end = new Date();
+//     if (end - start > threshold) {
+//       devtoolsOpen = true;
+//       document.body.innerHTML = '';
+//       alert("DevTools виявлено. Сторінку буде закрито.");
+//       window.open('', '_self', '');
+//       window.close();
+//     }
+//   }, 1000);
+// })();
+
+// setInterval(() => {
+//   if (window.outerWidth - window.innerWidth > 100) {
+//     document.body.innerHTML = '';
+//     alert("DevTools виявлено. Сторінку буде закрито.");
+//     window.open('', '_self', '');
+//     window.close();
+//   }
+// }, 1000);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+const video = document.getElementById('bg-video');
+const content = document.getElementById('main');
+
+video.addEventListener('play', () => {
+  setTimeout(() => {
+    video.classList.add('dimmed'); // затемнюємо відео
+    content.classList.add('visible'); // показуємо текст
+  }, 2000);
 });
-
-(function detectDevTools() {
-  const threshold = 160;
-  let devtoolsOpen = false;
-
-  setInterval(() => {
-    const start = new Date();
-    debugger;
-    const end = new Date();
-    if (end - start > threshold) {
-      devtoolsOpen = true;
-      document.body.innerHTML = '';
-      alert("DevTools виявлено. Сторінку буде закрито.");
-      window.open('', '_self', '');
-      window.close();
-    }
-  }, 1000);
-})();
-
-setInterval(() => {
-  if (window.outerWidth - window.innerWidth > 100) {
-    document.body.innerHTML = '';
-    alert("DevTools виявлено. Сторінку буде закрито.");
-    window.open('', '_self', '');
-    window.close();
-  }
-}, 1000);

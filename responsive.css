@@ -1,4 +1,3 @@
-/* Media Query for screens between 769px and 1200px */
 @media (min-width: 769px) and (max-width: 1200px) {
   /* General Styles */
   .container {
@@ -623,6 +622,10 @@
 
   .job {
     font-size: 15px !important;
+  }
+
+  .experience:last-child {
+    text-shadow: 0 100px 10px black;
   }
 
   /* About Us */
