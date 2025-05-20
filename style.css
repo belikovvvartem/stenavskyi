@@ -79,7 +79,7 @@ button {
     cursor: pointer !important;
     height: 60px;
     font-weight: 500;
-    font-family: var(--main-font);
+    font-family: "Montserrat Alternates", sans-serif;
     color: var(--white-color);
     border: none;
     background: linear-gradient(90deg, rgba(250, 194, 3, 1) 0%, rgba(255, 119, 0, 1) 92%);
@@ -130,6 +130,10 @@ header {
 .logo-name {
     font-size: 25px;
     font-weight: 500;
+}
+
+.logo-img {
+    width: 70px;
 }
 
 nav ul {
