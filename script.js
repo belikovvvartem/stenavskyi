@@ -263,24 +263,3 @@ window.addEventListener('click', function (e) {
 // }, 1000);
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-const video = document.getElementById('bg-video');
-const content = document.getElementById('main');
-
-video.addEventListener('play', () => {
-  setTimeout(() => {
-    video.classList.add('dimmed'); // затемнюємо відео
-    content.classList.add('visible'); // показуємо текст
-  }, 2000);
-});
