@@ -7,7 +7,7 @@
     <title>Дякуємо</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
-    
+
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
@@ -19,7 +19,7 @@
 
         body {
             min-height: 100vh;
-            background: linear-gradient(135deg, #828282,  #6f6c6c,  #828282);
+            background: linear-gradient(135deg, #828282, #6f6c6c, #828282);
             color: #fff;
             font-family: 'Segoe UI', sans-serif;
             display: flex;
@@ -114,6 +114,7 @@
 
         .tiktok {
             background: black;
+            width: 100%;
         }
 
         .tiktok:hover {
@@ -137,11 +138,19 @@
         }
 
         .video {
-            background: #444;
+            background: linear-gradient(45deg, #a64bf4, #ff4fd8);
         }
 
         .video:hover {
-            background: #666;
+            filter: brightness(1.1);
+        }
+
+        .telegram {
+            background: linear-gradient(45deg, #0a2e73, #229ed9);
+        }
+
+        .telegram:hover {
+            filter: brightness(1.1);
         }
 
         @media (min-width: 600px) {
@@ -160,11 +169,18 @@
     </div>
 
     <div class="buttons">
-        <a href="https://tiktok.com" target="_blank" class="btn back" data-aos="zoom-in" data-aos-delay="1000"><i class="fas fa-arrow-left"></i> Повернутись на головну сторінку </a>
-        <a href="https://yourvideo.com" target="_blank" class="btn video" ><i class="fas fa-play-circle"></i> Відео офісу</a>
-        <a href="https://instagram.com" target="_blank" class="btn instagram" ><i class="fab fa-instagram"></i> Instagram</a>
-        <a href="https://facebook.com" target="_blank" class="btn facebook" ><i class="fab fa-facebook-f"></i> Facebook</a>
-        <a href="https://tiktok.com" target="_blank" class="btn tiktok"><i class="fab fa-tiktok"></i> TikTok</a>
+        <a href="https://stenavskyi.com" class="btn back" data-aos="zoom-in" data-aos-delay="1000"><i
+                class="fas fa-arrow-left"></i> Повернутись на головну сторінку </a>
+
+        <a href="https://www.facebook.com/vasil.stenavs.kij.961855/?rdid=zudXDzn9hdd0Lk3k" target="_blank"
+            class="btn facebook"><i class="fab fa-facebook-f"></i> Facebook</a>
+        <a href="https://www.instagram.com/stenavskyi.v/" target="_blank" class="btn instagram"><i
+                class="fab fa-instagram"></i> Instagram</a>
+        <a href="https://www.tiktok.com/@stenavskyi.v/video/7499035978456108343?is_from_webapp=1&sender_device=pc&web_id=7501008906934027781"
+            target="_blank" class="btn video"><i class="fas fa-play-circle"></i> Відео офісу</a>
+        <a href="https://t.me/vstenli" target="_blank" class="btn telegram"><i class="fab fa-telegram"></i> Telegram</a>
+        <a href="https://www.tiktok.com/@stenavskyi.v" target="_blank" class="btn tiktok"><i class="fab fa-tiktok"></i>
+            TikTok</a>
     </div>
 
 
