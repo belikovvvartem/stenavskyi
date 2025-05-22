@@ -230,10 +230,9 @@ ul li a {
 .container-right {
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
+    justify-content: space-between;
     width: 350px;
-    height: 470px;
-    gap: 150px;
+    height: 450px;
 }
 
 .container-right {
