@@ -126,7 +126,7 @@ document.addEventListener('DOMContentLoaded', function () {
             if (hasError) {
                 showNotification("Помилка надсилання. Спробуйте ще раз.");
             } else {
-                showNotification("Звернення успішно надіслано!");
+                window.location.href = 'thanks-page.html'
                 form.reset();
             }
         }).catch(() => {
