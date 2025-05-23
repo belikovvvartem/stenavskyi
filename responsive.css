@@ -787,6 +787,20 @@
     align-items: center;
   }
 
+  .done::before {
+    width: 100px;
+    height: 100px;
+    top: 40px;
+    right: -20px;
+  }
+
+  .results::before {
+    width: 100px;
+    height: 100px;
+    bottom: 60px;
+    left: -20px;
+  }
+
   .results,
   .done {
     width: 250px;
