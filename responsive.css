@@ -789,11 +789,11 @@
 
   .results,
   .done {
-    width: 300px;
+    width: 250px;
   }
 
   .results li {
-    width: 76%;
+    width: 64%;
   }
 
   .case-buttons {
