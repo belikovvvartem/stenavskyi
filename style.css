@@ -33,7 +33,6 @@ body {
     scroll-behavior: smooth;
     font-family: "Montserrat Alternates", sans-serif;
     font-optical-sizing: auto;
-    font-weight: 700;
     font-style: normal;
     user-select: none;
     background: #000000;
@@ -279,9 +278,9 @@ ul li a {
 }
 
 .experience .job {
-    font-family: var(--fatty-font);
     text-shadow: none;
     font-size: 20px;
+    font-weight: 700;
 }
 
 .experience h3 {
