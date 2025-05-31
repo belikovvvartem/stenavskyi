@@ -27,6 +27,68 @@
     <meta name="twitter:image" content="https://stenavskyi.com/foto-for-social.jpg">
 
 
+    <!-- Meta Pixel Code -->
+    <script>
+        !function (f, b, e, v, n, t, s) {
+            if (f.fbq) return; n = f.fbq = function () {
+                n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n;
+            n.push = n; n.loaded = !0; n.version = '2.0';
+            n.queue = []; t = b.createElement(e); t.async = !0;
+            t.src = v; s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '726375066400351');
+        fbq('track', 'PageView');
+    </script>
+    <noscript>
+        <img height="1" width="1" style="display:none"
+            src="https://www.facebook.com/tr?id=726375066400351&ev=PageView&noscript=1" />
+    </noscript>
+    <!-- End Meta Pixel Code -->
+
+    <!-- TikTok Pixel Code Start -->
+    <script>
+        !function (w, d, t) {
+            w.TiktokAnalyticsObject = t; var ttq = w[t] = w[t][]; ttq.methods = ["page", "track", "identify", "instances", "debug", "on", "off", "once", "ready", "alias", "group", "enableCookie", "disableCookie", "holdConsent", "revokeConsent", "grantConsent"], ttq.setAndDefer = function (t, e) { t[e] = function () { t.push([e].concat(Array.prototype.slice.call(arguments, 0))) } }; for (var i = 0; i < ttq.methods.length; i++)ttq.setAndDefer(ttq, ttq.methods[i]); ttq.instance = function (t) {
+                for (
+                    var e = ttq._i[t][], n = 0; n < ttq.methods.length; n++)ttq.setAndDefer(e, ttq.methods[n]); return e
+            }, ttq.load = function (e, n) {
+                var r = "https://analytics.tiktok.com/i18n/pixel/events.js", o = n && n.partner; ttq._i = ttq._i || {}, ttq._i[e] = [], ttq._i[e]._u = r, ttq._t = ttq._t || {}, ttq._t[e] = +new Date, ttq._o = ttq._o || {}, ttq._o[e] = n || {}; n = document.createElement("script")
+                    ; n.type = "text/javascript", n.async = !0, n.src = r + "?sdkid=" + e + "&lib=" + t; e = document.getElementsByTagName("script")[0]; e.parentNode.insertBefore(n, e)
+            };
+
+
+            ttq.load('D0TFL13C77UBTE66NE60');
+            ttq.page();
+        }(window, document, 'ttq');
+    </script>
+    <!-- TikTok Pixel Code End -->
+
+
+
+    <script>
+        setTimeout(() => {
+            if (typeof ttq === 'undefined' || typeof ttq.page !== 'function') {
+                console.error('[TikTok Pixel] ❌ Не завантажено або з помилкою!');
+            } else {
+                console.log('[TikTok Pixel] ✅ Завантажено успішно');
+            }
+        }, 3000); // чекаємо 3 секунди після завантаження сторінки
+    </script>
+    <script>
+        setTimeout(() => {
+            if (typeof fbq === 'undefined' || typeof fbq.callMethod !== 'function') {
+                console.error('[Meta Pixel] ❌ Не завантажено або з помилкою!');
+            } else {
+                console.log('[Meta Pixel] ✅ Завантажено успішно');
+            }
+        }, 3000);
+    </script>
+
+
 
     <title>Василь Стенавський — Маркетолог | Таргетована реклама, чат-боти, воронки продажу</title>
     <link rel="stylesheet" href="style.css">
@@ -110,7 +172,8 @@
                         <div class="experience" data-aos="fade-left" data-aos-delay="200">
                             <div class="square"></div>
                             <div class="job">🚀 Просування,<br> яке дає результат:</div>
-                            <h3>Таргетована реклама Meta,TikTok <br> SMM-стратегія <br> Автоворонки та чат-боти <br> Конверсійні лендінги</h3>
+                            <h3>Таргетована реклама Meta,TikTok <br> SMM-стратегія <br> Автоворонки та чат-боти <br>
+                                Конверсійні лендінги</h3>
                         </div>
                         <div class="budget" data-aos="fade-right" data-aos-delay="300">
                             <div class="number">4+</div>
@@ -669,8 +732,8 @@
                                     </div>
                                 </div>
                                 <div class="case-buttons">
-                                    <a href="https://instagram.com/pop_mebli" target="_blank"
-                                        rel="noopener noreferrer" class="btn"><button>Instagram</button></a>
+                                    <a href="https://instagram.com/pop_mebli" target="_blank" rel="noopener noreferrer"
+                                        class="btn"><button>Instagram</button></a>
                                     <button class="btn" onclick="openModal('modal8')">Інсайд кейсу</button>
                                 </div>
                             </div>
@@ -1083,8 +1146,8 @@
         </div>
         <div id="modal16" class="modal">
             <span class="close" onclick="closeModal('modal15')">&times;</span>
-            <img class="modal-content" src="./src/case/inside/case-inside-gorzhovskyi.png"
-                alt="Замовити кейс" loading="lazy">
+            <img class="modal-content" src="./src/case/inside/case-inside-gorzhovskyi.png" alt="Замовити кейс"
+                loading="lazy">
         </div>
 
         <section class="contact-section" id="Contact">
